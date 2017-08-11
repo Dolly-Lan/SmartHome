@@ -71,7 +71,32 @@ a {
 .main {
     width: 870px;
 }
-
+.loading-wrap{
+    position: absolute;
+    z-index: 9999;
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+}
+.loading-wrap .loading-inner{
+    display:table;
+    width:100%;
+    height: 100%;
+}
+.loading-wrap .loading-inner .loading{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color:#fb7417;
+}
+.loading-wrap .loading-inner .loading i{
+    display:inline-block;
+    width: 102px;
+    height: 40px;
+    background: url(../img/logo.png);
+    vertical-align: middle;
+    margin: -4px 10px 0 0;
+}
 .btn-scroll {
     position: fixed;
     bottom: 0;
@@ -94,6 +119,7 @@ a {
 }
 
 .scene-bar {
+    display:none;
     position: fixed;
     z-index: 2000;
     right: 18px;
@@ -128,60 +154,6 @@ a {
     margin: 0;
 }
 
-.banner {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/home/banner-bg.jpg);
-    background-position: center 0;
-    background-size: cover;
-    text-align: center;
-}
-
-.banner .banner-font-wrap {
-    top: 28%;
-    position: relative;
-    z-index: 5;
-}
-
-.banner .banner-font {
-    width: 644px;
-    height: 311px;
-    margin: 0 auto 20px;
-    background: url(../img/home/banner-font.png);
-    background-position: center 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.banner p {
-    width: 941px;
-    height: 48px;
-    margin: 0 auto;
-    background: url(../img/home/banner-sub-font.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.bar-fix-up {
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    bottom: 0;
-    left: 0;
-    animation: bar-slide-up 0.5s;
-}
-
-.bar-fix-down {
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    bottom: -77px;
-    left: 0;
-    animation: bar-slide-down 0.5s;
-}
-
 .scene-wrap {
     position: relative;
     width: 100%;
@@ -196,10 +168,10 @@ a {
 .scene1 {
     position: relative;
     height: 100%;
-    background-image: url(../img/home/scene1-bg.jpg);
     background-position: center 0;
     text-align: center;
     background-size: cover;
+    background-image: url(../img/home/scene1-bg.jpg);
 }
 
 .scene1 .triangle {
@@ -312,10 +284,10 @@ a {
 .scene2 {
     position: relative;
     height: 100%;
-    background-image: url(../img/home/scene2-bg.jpg);
     background-position: center 0;
     text-align: center;
     background-size: cover;
+    background-image: url(../img/home/scene2-bg.jpg);
 }
 
 .scene2 .grid {
@@ -411,10 +383,10 @@ a {
 .scene3 {
     position: relative;
     height: 100%;
-    background-image: url(../img/home/scene3-bg.jpg);
     background-position: center 0;
     text-align: center;
     background-size: cover;
+    background-image: url(../img/home/scene3-bg.jpg);
 }
 
 .scene3 .light {
@@ -493,10 +465,10 @@ a {
 .scene4 {
     position: relative;
     height: 100%;
-    background-image: url(../img/home/scene4-bg.jpg);
     background-position: center 0;
     text-align: center;
     background-size: cover;
+    background-image: url(../img/home/scene4-bg.jpg);
 }
 
 .scene4 .round {
@@ -616,10 +588,10 @@ a {
 .scene5 {
     position: relative;
     height: 100%;
-    background-image: url(../img/home/scene5-bg.jpg);
     background-position: center 0;
     text-align: center;
     background-size: cover;
+    background-image: url(../img/home/scene5-bg.jpg);
 }
 
 .scene5 .triangle {
@@ -758,10 +730,10 @@ a {
 .scene6 {
     position: relative;
     height: 100%;
-    background-image: url(../img/home/scene6-bg1.jpg);
     background-position: center 0;
     text-align: center;
     background-size: cover;
+    background-image: url(../img/home/scene6-bg1.jpg);
 }
 
 .scene6 .scene6-bg2 {
@@ -770,11 +742,11 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/home/scene6-bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 0;
     z-index: 1;
+    background-image: url(../img/home/scene6-bg2.jpg);
 }
 
 .scene6 .scene6-font {

@@ -62,27 +62,32 @@ var moveToPage = function (index, delta) {
                 break;
             case 1:
                 $(".indoor-page").eq(1).addClass("animation");
+                $(".indoor-page").eq(2).attr("class","scene3 indoor-page");
                 $("#btn-scroll").attr("animation","2");
                 break;
             case 2:
                 //scene3();
                 $(".indoor-page").eq(2).addClass("animation");
+                $(".indoor-page").eq(3).attr("class","scene4 indoor-page");
                 $("#btn-scroll").attr("animation","3");
                 break;
             case 3:
                 //scene4();
                 $(".indoor-page").eq(3).addClass("animation");
+                $(".indoor-page").eq(4).attr("class","scene5 indoor-page");
                 $("#btn-scroll").attr("animation","4");
                 break;
             case 4:
                 //scene5();
                 $(".indoor-page").eq(4).addClass("animation");
+                $(".indoor-page").eq(5).attr("class","scene6 indoor-page");
                 $("#btn-scroll").attr("animation","5");
                 break;
             case 5:
                 //scene6();
                 $(".indoor-page").eq(5).addClass("animation");
                 $("#btn-scroll").css("display","none");
+                $("#scene-bar-nav").css("display","block");
                 break;
         };
         _pageDelay = false;
@@ -127,5 +132,10 @@ var init = function () {
 };
 
 $(document).ready(function () {
-    init();
+    var img = new Image();
+    img.src = $(".scene1").css("background-image").split("\"")[1];
+    img.onload = function(){  //image的onload事件可以判断图片是否加载完成
+        $(".loading-wrap").hide();
+        init();
+    }
 });
